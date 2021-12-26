@@ -76,7 +76,21 @@ $$f_q^*([z]) := [f_q^{\#}(z)]$$
 
 ### Example 0.10
 
-Example 0.4によって単体写像$\phi: K \longrightarrow L$から鎖準同型$\hat \phi_q$を定義したが,$\hat \phi_q$の双対鎖準同型から定まるコホモロジー群の準同型$\hat \phi_q^{*}:H^q(L) \longrightarrow H^q(K)$を,**単体写像$\phi: K \longrightarrow L$から誘導されるコホモロジー群の準同型**と言い,単に$\phi_q^{*}:H^q(L) \longrightarrow H^q(K)$あるいは$\phi^*:H^q(L) \longrightarrow H^q(K)$
+Example 0.4によって単体写像$\phi: K \longrightarrow L$から鎖準同型$\hat \phi_q$を定義したが,$\hat \phi_q$の双対鎖準同型から定まるコホモロジー群の準同型$\hat \phi_q^{*}:H^q(L) \longrightarrow H^q(K)$を,**単体写像$\phi: K \longrightarrow L$から誘導されるコホモロジー群の準同型**と言い,単に$\phi_q^{*}:H^q(L) \longrightarrow H^q(K)$あるいは$\phi^*:H^q(L) \longrightarrow H^q(K)$とも書く.
+
+### Definition 0.11 相対ホモロジー群
+
+$K$を複体として$L \subset K$を部分複体とする.このとき鎖群$C_q(K),C_q(L)$は$C_q(L) \subset C_q(K)$を満たす.そこで
+$$C_q(K, L) := C_q(K) / C_q(L)$$
+とおく.$\partial_q: C_q(K) \longrightarrow C_{q - 1}(K)$を境界準同型とすると$\partial_q(C_q(L)) = B_{q - 1}(L) \subset C_{q - 1}(L)$であるから
+$$c - c' \in C_q(L) (c , c' \in C_q(K)) \Longrightarrow \partial_q(c) - \partial(c') \in C_{q - 1}(L)$$
+が成り立つ.従って準同型$\partial_q^*:C_q(K, L) \longrightarrow C_{q - 1}(K, L)$が
+$$\partial_q^*([c]) := [\partial_q(c)]$$
+として矛盾なく定義される.$\partial_{q + 1} \circ \partial_q = \boldsymbol{0}$より$\partial_{q + 1}^* \circ \partial_q^* = \boldsymbol{0}$であるから,鎖群のときと同様に
+$$Im \partial_{q + 1}^*\subset  \ker \partial_q^* $$
+が成り立つ.
+$$H_q(K, L) : = \ker \partial_q^*/Im \partial_{q + 1}^*$$
+としたものを **$q$次元相対ホモロジー群** という.
 
 ## Chapter 5
 
