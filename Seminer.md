@@ -80,17 +80,51 @@ Example 0.4によって単体写像$\phi: K \longrightarrow L$から鎖準同型
 
 ### Definition 0.11 相対ホモロジー群
 
-$K$を複体として$L \subset K$を部分複体とする.このとき鎖群$C_q(K),C_q(L)$は$C_q(L) \subset C_q(K)$を満たす.そこで
+$K$を複体として$L \subset K$を部分複体とする.このとき鎖群$C_q(K),C_q(L)$は$C_q(L) \subset C_q(K)$を満たす.そこで$q$次元相対鎖群$C_q(K, L)$を
 $$C_q(K, L) := C_q(K) / C_q(L)$$
-とおく.$\partial_q: C_q(K) \longrightarrow C_{q - 1}(K)$を境界準同型とすると$\partial_q(C_q(L)) = B_{q - 1}(L) \subset C_{q - 1}(L)$であるから
+とおく.$\partial_q: C_q(K) \longrightarrow C_{q - 1}(K)$を境界準同型とすると$\partial_q(C_q(L)) \subset C_{q - 1}(L)$であるから
 $$c - c' \in C_q(L) (c , c' \in C_q(K)) \Longrightarrow \partial_q(c) - \partial(c') \in C_{q - 1}(L)$$
-が成り立つ.従って準同型$\partial_q^*:C_q(K, L) \longrightarrow C_{q - 1}(K, L)$が
+が成り立つ.従って相対鎖群の間の境界準同型$\partial_q^*:C_q(K, L) \longrightarrow C_{q - 1}(K, L)$が
 $$\partial_q^*([c]) := [\partial_q(c)]$$
-として矛盾なく定義される.$\partial_{q + 1} \circ \partial_q = \boldsymbol{0}$より$\partial_{q + 1}^* \circ \partial_q^* = \boldsymbol{0}$であるから,鎖群のときと同様に
+として矛盾なく定義される.\
+$\partial_{q + 1} \circ \partial_q = \boldsymbol{0}$より$\partial_{q + 1}^* \circ \partial_q^*= \boldsymbol{0}$であるから,鎖群のときと同様に
 $$Im \partial_{q + 1}^*\subset  \ker \partial_q^* $$
 が成り立つ.
 $$H_q(K, L) : = \ker \partial_q^*/Im \partial_{q + 1}^*$$
 としたものを **$q$次元相対ホモロジー群** という.
+今,$\pi_p:C_p(K) \longrightarrow C_p(K, L)$を標準的な射影とすると$\partial_q^*$の定義から
+$$\partial^*_q \circ \pi_q = \pi_{q - 1} \circ \partial_q$$
+が成り立つ.つまり$\{\pi_q\}$は二つの鎖群$C_q(K)$と$C_q(K, L)$の間の鎖準同型となる.従って$\{\pi_q\}$はホモロジー群の間の準同型
+$$(\pi_q)_*:H_q(K) \longrightarrow H_q(K, L)$$
+を誘導する.ここで$(\pi_q)_*([z]) = [\pi_q(z)]$である.
+
+### Definition 0.12 相対コホモロジー群
+
+相対鎖群$C_q(K, L)$から$\mathbb{Z_2}$への準同型写像全体の集合を$C^q(K, L)$と書く.$\partial_q^*:C_q(K, L) \longrightarrow C_{q - 1}(K, L)$を相対鎖群の境界準同型とするとき,その双対境界準同型$\delta_q^*:C^q(K, L) \longrightarrow C^{q + 1}(K, L)$を
+$$\delta_q^*(f) : = f \circ \partial_{q + 1}^* \ \ \ (f \in C^q(K, L))$$
+で定義する.$\partial_q^*\circ \partial_{q + 1}^* = \boldsymbol{0}$であるから,$\delta_{q} ^* \circ \delta_{q - 1}^*= \boldsymbol{0}$である.つまり
+$$Im \ \delta_{q - 1}^* \subset \ker \delta_{q}^*$$
+が成り立つ.そこで相対コホモロジー群$H^q(K, L)$を
+$$H^q(K, L) := \ker \delta_{q}^*/ Im \delta_{q - 1}^*$$
+で定義する.相対コホモロジー群も標準的に相対ホモロジー群の双対$\hom(H_q(K, L), \mathbb{Z}_2)$と同型である.
+
+### Definition 0.13 相対コホモロジーの元とのカップ積
+
+以下では$H^q(K) = \hom(H_q(K), \mathbb{Z}_2),H^q(K, L) = \hom(H_q(K, L), \mathbb{Z}_2)$と見做す.$f \in H^p(K, L), g \in H^q(K)$とすると$f \circ (\pi_p)_*\in H^p(K)$であるから,カップ積$f \smile g \in H^{p + q}(K, L)$を
+$$f \smile g := f \circ (\pi_p)_* \smile g$$
+で定義する.ただし,右辺のカップ積は通常のコホモロジー群$H^q(K)$でのカップ積である.
+
+### Definition 0.12 境界を持つ多様体
+
+上半空間$\mathbb{H}^n:= \{(x_1, \cdots, x_n) \in \mathbb{R}^n | x_n \geq 0\}$を$\mathbb{R}^n$の部分位相空間とみなす.
+$M$が **$n$次元境界付き位相多様体** であるとは,第二可算公理を満たすハウスドルフ空間であって, $M$の各点が上半空間のある開集合と同相になるような開近傍を持つことをいう.\
+$p \in M$の開近傍$U$から,$\mathbb{H}^n$の開集合$V$への同相写像を$\phi : U \longrightarrow V$とするとき,対$(U, \phi)$を$p$の**チャート**という.\
+また$p \in M$が$M$の**境界点**であるとは,$p$のあるチャート$(U, \phi)$で$\phi(p)$の第$n$成分が$0$であるものが存在することをいう.$M$の境界点全体を$\partial M$と書く.
+
+### Theorem 0.13 Lefschetz双対
+
+$M$を向きづけ可能なコンパクトな境界付き多様体とする.$[M]_2 \in H_n(M, \partial M)$を基本ホモロジー類とするとき,これとのキャップ積で与えられる二つの写像は同型である.
+$$\phi:H^k(M, \partial M) \ni [z] \longrightarrow [M]_2 \frown [z] \in H_{n - k}(M) \\ \psi: H^{n - k}(M) \ni [z] \longrightarrow [M]_2 \frown [z] \in H_{k}(M, \partial M) $$
 
 ## Chapter 5
 
@@ -125,6 +159,6 @@ $$pers(\gamma) = j - i$$
 
 ### Definition 5.3
 
-$q$次元のコホモロジー類 $\Gamma$ が $K_j$ で**誕生する**とは$\Gamma \in H^q(K_j) - Im \ (\psi_{j+ 1, j})^*$を満たすことであり,それが$K_i$で**消滅する**とは$i = \max \{k| \exists \Lambda \in H^q(K_{j + 1})\ s.t. \  (\psi_{j + 1, k})^*(\Lambda) = \psi_{j, k}^q(\Gamma) \}$を満たすことである.またこの時$copers(\Gamma) = j - i$を$\Gamma$の$co persistence $という.
+$q$次元のコホモロジー類 $\Gamma$ が $K_j$ で**誕生する**とは$\Gamma \in H^q(K_j) - Im \ (\psi_{j+ 1, j})^*$を満たすことであり,それが$K_i$で**消滅する**とは$i = \max \{k| \exists \Lambda \in H^q(K_{j + 1})\ s.t. \  (\psi_{j + 1, k})^*(\Lambda) = \psi_{j, k}^q(\Gamma) \}$を満たすことである.またこの時$copers (\Gamma) = j - i$を$\Gamma$の$co persistence $という.
 
 ### Definition 5.4
