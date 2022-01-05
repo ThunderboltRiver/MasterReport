@@ -78,6 +78,8 @@ $$f_q^*([z]) := [f_q^{\#}(z)]$$
 
 Example 0.4によって単体写像$\phi: K \longrightarrow L$から鎖準同型$\hat \phi_q$を定義したが,$\hat \phi_q$の双対鎖準同型から定まるコホモロジー群の準同型$\hat \phi_q^{*}:H^q(L) \longrightarrow H^q(K)$を,**単体写像$\phi: K \longrightarrow L$から誘導されるコホモロジー群の準同型**と言い,単に$\phi_q^{*}:H^q(L) \longrightarrow H^q(K)$あるいは$\phi^*:H^q(L) \longrightarrow H^q(K)$とも書く.
 
+以降では,鎖群の元を$c$と表し,特に境界準同型の核の元を表すのに$z$を用いる.双対鎖群の元は特に断りが無い場合は$f$と表すことにする.
+
 ### Definition 0.11 相対ホモロジー群
 
 $K$を複体として$L \subset K$を部分複体とする.このとき鎖群$C_q(K),C_q(L)$は$C_q(L) \subset C_q(K)$を満たす.そこで$q$次元相対鎖群$C_q(K, L)$を
@@ -97,7 +99,9 @@ $$H_q(K, L) : = \ker  \partial_q^*/Im \partial_{q + 1}^*$$
 $$\partial^*_q \circ \pi_q = \pi_{q - 1} \circ \partial_q$$
 が成り立つ.つまり$\{\pi_q\}$は二つの鎖群$C_q(K)$と$C_q(K, L)$の間の鎖準同型となる.従って$\{\pi_q\}$はホモロジー群の間の準同型
 $$(\pi_q)_*:H_q(K) \longrightarrow H_q(K, L)$$
-を誘導する.ここで$(\pi_q)_*([z]) = [\pi_q(z)]$である.
+とコホモロジー群の間の準同型
+$$(\pi_q)^*:H^q(K, L) \longrightarrow H^q(K)$$
+を誘導する.ここで$(\pi_q)_*([z]) = [\pi_q(z)]$であり,$(\pi_q)^*([f]) = [ f \circ \pi_q]$である.
 
 ### Definition 0.12 相対コホモロジー群
 
@@ -149,11 +153,17 @@ $F \in \hom(H_q(K, L), \mathbb{Z}_2)$とする.$\phi \circ \psi(F) = \phi([h_F])
 
 以上の議論から題意が示された.$\square$
 
-### Definition 0.14 相対コホモロジーの元とのカップ積
+### Definition 0.14 相対コホモロジーの元と積
 
-以下では$H^q(K) = \hom(H_q(K), \mathbb{Z}_2),H^q(K, L) = \hom(H_q(K, L), \mathbb{Z}_2)$と見做す.$f \in H^p(K, L), g \in H^q(K)$とすると$f \circ (\pi_p)_*\in H^p(K)$であるから,カップ積$f \smile g \in H^{p + q}(K, L)$を
+以下では$H^q(K) = \hom(H_q(K), \mathbb{Z}_2),H^q(K, L) = \hom(H_q(K, L), \mathbb{Z}_2)$と見做す.この意味でコホモロジー類を$[f]$ではなく単純に$f$と書くことにする.
+$f \in H^p(K, L)$ $g \in H^q(K)$とすると$f \circ (\pi_q)_*\in H^p(K)$であるから,カップ積$f \smile g \in H^{p + q}(K, L)$を
 $$f \smile g := (f \circ (\pi_p)_* ) \smile g) \circ (\pi_{p + q})_*$$
-で定義する.ただし,右辺のカップ積は通常のコホモロジー群$H^q(K)$でのカップ積である.
+で定義する.ただし,右辺のカップ積は通常のコホモロジー群$H^q(K)$でのカップ積である.また,$[z] \in H_{p + q}(K, L)$とのキャップ積を$f \in H^p(K, L)$のときは
+$$ h([z] \frown f) := f \smile h([z]) \ \ \forall h \in H^q(K)$$
+となる$[z] \frown f \in H_q(K)$として定義する.
+$f \in H^p(K)$のときは
+$$ h([z] \frown f) := h \smile f([z]) \ \ \forall h \in H^q(K, L)$$
+なる$[z] \frown f \in H_q(K, L)$とする.
 
 ### Definition 0.15 境界を持つ多様体
 
@@ -164,7 +174,7 @@ $p \in M$の開近傍$U$から,$\mathbb{H}^n$の開集合$V$への同相写像�
 
 ### Theorem 0.16 Lefschetz双対
 
-$M$を向きづけ可能なコンパクトな境界付き多様体とする.$[M]_2 \in H_n(M, \partial M)$を基本ホモロジー類とするとき,これとのキャップ積で与えられる二つの写像は同型である.
+$M$を境界をもつ$n$次元ホモロジー多様体とする.$[M]_2 \in H_n(M, \partial M)$を基本ホモロジー類とするとき,これとのキャップ積で与えられる二つの写像は同型である.
 $$\phi:H^k(M, \partial M) \ni [z] \longrightarrow [M]_2 \frown [z] \in H_{n - k}(M) \\ \psi: H^{n - k}(M) \ni [z] \longrightarrow [M]_2 \frown [z] \in H_{k}(M, \partial M) $$
 
 ## Chapter 5
@@ -175,8 +185,7 @@ $$\emptyset = X_0 \subset X_1 \subset \cdots \subset X_n = X$$
 $$\emptyset = K_0 \subset K_1 \subset \cdots \subset K_n = K$$
 を考える.包含写像$\psi_{j, i}: K_i \longrightarrow K_{j} \ (i \leq j)$はホモロジー群の間の準同型
 $$(\psi_{j, i})_*:H_q(K_i) \longrightarrow H_q(K_j)$$
-と
-コホモロジー群の間の準同型
+とホモロジー群の間の準同型
 $$(\psi_{j, i})^*:H^q(K_j) \longrightarrow H^q(K_i)$$
 を誘導する.
 特に$i = j+ 1, j = 0, \cdots , n$まで考えることでホモロジー群の系列
@@ -202,4 +211,12 @@ $$pers(\gamma) = j - i$$
 
 $q$次元のコホモロジー類 $\Gamma$ が $K_j$ で**誕生する**とは$\Gamma \in H^q(K_j) - Im \ (\psi_{j+ 1, j})^*$を満たすことであり,それが$K_i$で**消滅する**とは$i = \max \{k| \exists \Lambda \in H^q(K_{j + 1})\ s.t. \  (\psi_{j + 1, k})^*(\Lambda) = \psi_{j, k}^q(\Gamma) \}$を満たすことである.またこの時$copers (\Gamma) = j - i$を$\Gamma$の$co persistence $という.
 
-### Definition 5.4
+## Chapter 6
+
+フィルトレーション
+$$\emptyset = X_0 \subset X_1 \subset \cdots \subset X_n = X$$
+の各$X_i$が弧状連結な$n$次元ホモロジー多様体であると仮定し,$\partial X_i$をDefinition0.15の意味での境界とする.このときTheorem 0.14より$H^q(X_i)$は$H_{n - q}(X_i,\partial X_i)$に同型である.従ってパーシステントコホモロジー
+$$\boldsymbol{0} = H^q(X_0) \longleftarrow H^q(X_1) \longleftarrow \cdots \longleftarrow H^q(X_n)$$
+のLefschetz双対として相対ホモロジーの系列
+$$\boldsymbol{0} = H_{n - q}(X_0, \partial X_0) \longrightarrow H_{n - q} (X_1, \partial X_1) \longrightarrow \cdots \longrightarrow H_{n - q}(X_n, \partial X_n) = H_{n - q}(X, \partial X)$$
+を得る.
