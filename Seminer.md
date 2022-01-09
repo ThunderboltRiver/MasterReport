@@ -209,7 +209,7 @@ $$pers(\gamma) = j - i$$
 
 ### Definition 5.3
 
-$q$次元のコホモロジー類 $\Gamma$ が $K_j$ で**誕生する**とは$\Gamma \in H^q(K_j) - Im \ (\psi_{j+ 1, j})^*$を満たすことであり,それが$K_i$で**消滅する**とは$i = \max \{k| \exists \Lambda \in H^q(K_{j + 1})\ s.t. \  (\psi_{j + 1, k})^*(\Lambda) = \psi_{j, k}^q(\Gamma) \}$を満たすことである.またこの時$copers (\Gamma) = j - i$を$\Gamma$の$co persistence $という.
+$q$次元のコホモロジー類 $\Gamma$ が $K_j$ で**誕生する**とは$\Gamma \in H^q(K_j) - Im \ (\psi_{j+ 1, j})^*$を満たすことであり,それが$K_i$で**消滅する**とは$i = \max \{kx| \exists \Lambda \in H^q(K_{j + 1})\ s.t. \  (\psi_{j + 1, k})^*(\Lambda) = \psi_{j, k}^q(\Gamma) \}$を満たすことである.またこの時$copers (\Gamma) = j - i$を$\Gamma$の$co persistence $という.
 
 ## Chapter 6
 
