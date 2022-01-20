@@ -215,8 +215,28 @@ $q$次元のコホモロジー類 $\Gamma$ が $K_j$ で**誕生する**とは$\
 
 フィルトレーション
 $$\emptyset = X_0 \subset X_1 \subset \cdots \subset X_n = X$$
-の各$X_i$が弧状連結な$n$次元ホモロジー多様体であると仮定し,$\partial X_i$をDefinition0.15の意味での境界とする.このときTheorem 0.14より$H^q(X_i)$は$H_{n - q}(X_i,\partial X_i)$に同型である.従ってパーシステントコホモロジー
+の各$X_i$が弧状連結な$n$次元ホモロジー多様体であると仮定し,$\partial X_i$をDefinition0.15の意味での境界とする.このときパーシステントホモロジー
+$$\boldsymbol{0} = H_q(X_0) \longrightarrow H_q(X_1) \longrightarrow \cdots \longrightarrow H_q(X_n)$$
+の次元$q$が大きい場合に,低次元のフィルトレーションに変換する方法を考える.
+まず,このパーシステントホモロジーの双対として,$H_q(X)$と同型な$H^q(X)$によって,パーシステントコホモロジー
 $$\boldsymbol{0} = H^q(X_0) \longleftarrow H^q(X_1) \longleftarrow \cdots \longleftarrow H^q(X_n)$$
-のLefschetz双対として相対ホモロジーの系列
+が得られる.このときTheorem 0.14より$H^q(X_i)$は$H_{n - q}(X_i,\partial X_i)$に同型である.従って上記のパーシステントコホモロジーにLefschetz双対を適用することで相対ホモロジーの系列
 $$\boldsymbol{0} = H_{n - q}(X_0, \partial X_0) \longrightarrow H_{n - q} (X_1, \partial X_1) \longrightarrow \cdots \longrightarrow H_{n - q}(X_n, \partial X_n) = H_{n - q}(X, \partial X)$$
-を得る.
+を得る.ただし,この系列の間の写像は？
+
+## Chapter7
+
+与えられたコホモロジー類に対して,それがいつカップ積によって分解可能であるかを示すためのアルゴリズムを考える.そしてこれをパーシステントコホモロジーにおいても拡張する.
+
+### Definition 18
+
+コホモロジー類$\beta \in H^{p + q}(X)$が分解可能(*decomposable*)であるとは, ある$f \in H^p(X)$と$g \in H^q(X)$が存在して$\beta = f \smile g$となることを言う.
+
+### Decomposability Algorithm
+
+単体複体のフィルとレーション
+$$\emptyset = K_0 \subset K_1 \subset \cdots \subset K_n = K$$
+であって,$K_i = K_{i - 1} \cup \sigma_i$となるものを考える.ここで$\sigma_i$は単体(の全ての辺単体からなる複体)とする.
+今,対応するパーシステントコホモロジー
+$$\boldsymbol{0} = H^*(K_0) \longleftarrow H^*(K_1) \longleftarrow \cdots \longleftarrow H^*(K_n)$$
+において,分解可能なコホモロジー類はいつ,どこで生まれるのかを判別するアルゴリズムを考える.ただし,ここでは
