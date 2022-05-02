@@ -209,7 +209,7 @@ $$pers(\gamma) = j - i$$
 
 ### Definition 5.3
 
-$q$次元のコホモロジー類 $\Gamma$ が $K_j$ で**誕生する**とは$\Gamma \in H^q(K_j) - Im \ (\psi_{j+ 1, j})^*$を満たすことであり,それが$K_i$で**消滅する**とは$i = \max \{kx| \exists \Lambda \in H^q(K_{j + 1})\ s.t. \  (\psi_{j + 1, k})^*(\Lambda) = \psi_{j, k}^q(\Gamma) \}$を満たすことである.またこの時$copers (\Gamma) = j - i$を$\Gamma$の$co persistence $という.
+$q$次元のコホモロジー類 $\Gamma$ が $K_j$ で**誕生する**とは$\Gamma \in H^q(K_j) - Im \ (\psi_{j+ 1, j})^*$を満たすことであり,それが$K_i$で**消滅する**とは$i = \max \{k| \exists \Lambda \in H^q(K_{j + 1})\ s.t. \  (\psi_{j + 1, k})^*(\Lambda) = \psi_{j, k}^q(\Gamma) \}$を満たすことである.またこの時$copers (\Gamma) = j - i$を$\Gamma$の$co persistence $という.
 
 ## Chapter 6
 
@@ -235,8 +235,10 @@ $$\boldsymbol{0} = H_{n - q}(X_0, \partial X_0) \longrightarrow H_{n - q} (X_1, 
 ### Decomposability Algorithm
 
 単体複体のフィルとレーション
-$$\emptyset = K_0 \subset K_1 \subset \cdots \subset K_n = K$$
-であって,$K_i = K_{i - 1} \cup \sigma_i$となるものを考える.ここで$\sigma_i$は単体(の全ての辺単体からなる複体)とする.
+$$\emptyset = K_0 \subset K_1 \subset \cdots \subset K_n = K_{n + 1} = \cdots = K$$
+であって,$K_i = K_{i - 1} \cup \lambda_i$となるものを考える.ここで$\lambda_i$は単体(の全ての辺単体からなる複体)とする.
 今,対応するパーシステントコホモロジー
 $$\boldsymbol{0} = H^*(K_0) \longleftarrow H^*(K_1) \longleftarrow \cdots \longleftarrow H^*(K_n)$$
-において,分解可能なコホモロジー類はいつ,どこで生まれるのかを判別するアルゴリズムを考える.ただし,ここでは
+において,分解可能なコホモロジー類はいつ,どこで生まれるのかを判別するアルゴリズムを考える.
+まず$p$次元コホモロジー類$[x]$が$K_s(s > n)$で誕生し,$K_t(t < n- 1)$で消滅すると仮定し,$x = \sigma_1^* + \cdots + \sigma_n^*$と表されているとする.さらに$\Delta$を$p + q$次元単体としたとき$K_n = K_{n - 1} \cup \Delta$であり,$\Delta^* = \delta(y)$となる$y \in C^{ p + q - 1}$が存在したと仮定する.
+このとき$K_{n - 1}$においては$\delta(y) = \boldsymbol{0}$となるから$K_{n - 1}$において$y$はコサイクルである.$y$を$p + q - 1$次元の単体で$y = \tau_1^* + \cdots + \tau_m^*$と表したとき,$CoIncidenceMatrix- D(y)$を次のように定義する;$\tau_1, \cdots, \tau_m$
