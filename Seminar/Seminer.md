@@ -417,7 +417,7 @@ $x \in X, k \in \mathbb{N}$に対して$\rho_k(x)$を,$x$から$k$番目に近�
 (誤解が無いよう式で書くと,集合 $\{ d(x, y) | y \in X \}$ を小さい順に番号づけして$\{d_1, \cdots, d_{m }\}$ としたときに $\rho_k(x) = d_k$ と定義する.)
 $x \in X$の周辺の$X$の密度は$\rho_k(x)$に反比例する.
 $k$を固定したときに$\rho_k$は$X$上の関数となるが,このとき密度$1 / \rho_k$の上位$p \%$の$X$の点からなる集合を$X(k, p)$とする.下図は$X$が$m = 10$個の点からなる場合に$p = 80$としたときの$X(k, p)$を示したものである.
-<img src="X(k,p).jpeg" height = "40%" width = "40%" style="display: block; margin: auto;">
+<img src="../images/X(k,p).jpeg" height = "40%" width = "40%" style="display: block; margin: auto;">
 
 #### 1.4 Denoising 
 省略
@@ -442,14 +442,14 @@ $$\frac{\boldsymbol{y} - m(\boldsymbol{y})\vec{1}}{\|\boldsymbol{y} - m(\boldsym
 
 - $\tilde{S}^7$を$S^7$に座標変換する;
 $\tilde{S}^7$の$D-norm$に関する正規直交基底として,以下のMumfordの基底をとり,
-<img src = "Mumford_basis.jpeg">
+<img src = "../images/Mumford_basis.jpeg">
 $A = [\boldsymbol{e}_1, \cdots ,\boldsymbol{e}_8], \Lambda = diag(\frac{1}{\| \boldsymbol{e}_1 \|^2} , \cdots , \frac{1}{\| \boldsymbol{e}_8 \|^2})$として$\boldsymbol{v} = \Lambda A^T \boldsymbol{y}$によって$S^7$に座標変換する.
 
 
 ### 3 The space of polynomials in two variables
 以下では集合$M$を多項式の族として捉えていく.$P$を$2$変数実係数多項式全体とする.
 1つのパッチの各ピクセルは$xy$平面上の点$(x_0, y_0) \in H := \{-1, 0, 1\}^2$として考えることができる.(下図)
-<img src="pach_as_H.jpeg" height="40%" width="40%" style="display: block; margin: auto">
+<img src="../images/pach_as_H.jpeg" height="40%" width="40%" style="display: block; margin: auto">
 今多項式$p(x, y) \in P$に$H$上の各点を代入することで$9$次元のベクトル$\boldsymbol{p} = [p_1, \cdots, p_9]^T$が得られる.$m(\boldsymbol{p}) := \frac{1}{9}\sum_{i}p_i$, $\vec{1} := [1, \cdots, 1]^T \in \mathbb{R}^9$とするとき,写像$q: P \longrightarrow \mathbb{R}^9$を
 $$q(p):= \frac{\boldsymbol{p} - m(\boldsymbol{p})\vec{1}}{\|\boldsymbol{p} - m(\boldsymbol{p})\vec{1}\|}$$
 で定義する.$Im (q) \subset W := \{ \boldsymbol{x} \in \mathbb{R}^9 | \sum_{i}x_i = 0, \|\boldsymbol{x}\| = 1\}$であるが,$W$は$S^7 \subset \mathbb{R}^8$と同相である.$W$を$S^7$と同一視して$q: P \longrightarrow S^7$とみなすことによって任意の多項式の族$T \subset P$を$S^7$の部分位相空間$Im(q|_T)$として扱うことができる.逆に言うと,$S^7$の部分空間を多項式の族で表現できる.
@@ -460,7 +460,7 @@ $$q(p):= \frac{\boldsymbol{p} - m(\boldsymbol{p})\vec{1}}{\|\boldsymbol{p} - m(\
 ### 5 Results for $X(k, p)$ spaces
 パッチの空間内の高密度な部分集合の構造について分析するのが目的である.
 [8]における研究では,$5 \cdot 10^4$個のパッチの空間を取り,$p = 30, k = 15$とすると$1$次のベッチ数が$5$になるような空間が得られた.このような空間の候補はいくらでもあるが,空間の性質を考慮すると**three circle model $C_3$**(下図)が理に適っているものの一つとして挙げられる.
-<img src="C_3.jpeg" hegiht = "40%" width = "40%" style="display: block; margin: auto">
+<img src="../images/C_3.jpeg" hegiht = "40%" width = "40%" style="display: block; margin: auto">
 $C_3$においては二つの円$S_v, S_h$は$S_{lin}$と$2$回交わっているが,互いには交点を持たない.Figure6はKlein bottle内にあるその$3$つの円を表したものである.このモデルは[8]によって提案された.セクション3のパッチの多項式表現の言葉では$S_{lin}$は$x,y$に関して1次であり,$S_v, S_h$は$x$あるいは$y$のどちらかに関して$2$次である.
 
 [8]における$X(15, 30)$はfigure 7に示される.$X(15, 30)$に対する自然の写真の結果は二つの相反する嗜好を示している.一つは小さいパッチに対するlinear intensity functionsであり,もう一つの嗜好性は垂直方向と水平方向への嗜好が中間方向よりも強かったことである.
@@ -488,7 +488,7 @@ $2.$で述べた$\tilde{M}$の取り方にあるように,コントラスト(D-n
 
 まずこの$K$がklein bottleに同相であることを見る.:\
 $g: S^1 \times S^1 \longrightarrow K$を$g(a, b, c, d) = c(ax + by)^2 + d(ax + by)$で定義する.$g$は全射で$(a, b, c, d)$と$(-a, -b, c, -d)$は同じ多項式に対応する.$(a, b), (c, d) \in S^1$であることに注意すると$(a, b), (c, d)$はそれぞれ角度$\theta, \phi \in [0, 2\pi]$に対応させることができる.
-<img src = "coodinate_theta.jpeg" hegiht = "40%" width = "40%" style="display: block; margin: auto">
+<img src = "../images/coodinate_theta.jpeg" hegiht = "40%" width = "40%" style="display: block; margin: auto">
 この対応を用いると,$g$によるトーラス上の同値関係は閉区間$[0, 2\pi] \times [0, 2\pi]$上の同値関係$(\theta, \phi) \sim (\theta + \pi, 2\pi - \phi )$で表すことができる.よって位相同型
 $$K = im(g) \simeq [0, 2\pi] \times [2 \pi] / \sim$$
 を得る.Figure 10は$g$の振る舞いについて図にしたものである.$R$は$g$によって$L$と同一視される.$L, R$は両方ともKlein bottleを表している.従って$K = im(g)$はKlein bottleに同相である.$\square$
