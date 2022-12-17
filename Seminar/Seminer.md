@@ -567,13 +567,3 @@ $M$の2-skeltonとして2次元多様体を考えるなら,更なる発展とし
 [5] de Silva V. A weak definition of Delaunay triangulation. (2003)
 
 ### Klein bottleの検出
-
-$I = [-1, 1]$とする.点$p = (x, y) \in I^2 $に対して,$c(p) \in \mathbb{R}^2$を次のように定義する.
-$$c(p) :=\begin{cases}\left( x , y\right)  \ \ p \in [0, 1]^2\\
-\left( x+2,2-y\right) \  p \in [-1, 0) \times (0, 1]\\
-\left( x +2,-y\right) \ p \in [-1, 0) \times  [-1, 0] \\
-\left( x,2+y \right) \  p \in [0, 1] \times [-1, 0)\end{cases}$$
-そこで$I^2 \times I^2$上の関数$d^*:I^2 \times I^2 \longrightarrow \mathbb{R}$を,$d^*(p_1, p_2) = \|c(p_1) - c(p_2)\|$で定義する.
-$\pi: I^2 \longrightarrow K$をKlein bottle$K$への標準的射影とするとき,$p_1, p_2 \in I^2$に対して次が成り立つ(?).
-$\pi(p_1) = \pi(p_2) \Longleftrightarrow d^*(p_1, p_2) = 0$
-
