@@ -1,5 +1,5 @@
 body {
-    counter-set: chapter section subsection proposition;
+    counter-set: chapter 0 section 0 subsection 0 proposition 0;
 }
 
 h1 {
@@ -36,4 +36,36 @@ h4::after {
 
 a.anchor-link {
     display: none;
+}
+
+div#showtitlewrapper {
+    display: none;
+}
+
+div.pix {
+    width: 30%;
+    height: 30%;
+    margin: initial;
+}
+
+.carlsson.p {
+    display: block;
+}
+
+div.carlsson {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+div.pix-center {
+    width: 30%;
+    height: 30%;
+    margin: auto;
+}
+
+div.text_cell_render>p {
+    font-family: "MS 明朝", serif;
+    line-height: 170%;
+    font-size: 15px;
 }
