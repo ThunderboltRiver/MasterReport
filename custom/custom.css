@@ -43,8 +43,8 @@ div#showtitlewrapper {
 }
 
 div.pix {
-    width: 30%;
-    height: 30%;
+    width: 50%;
+    height: 50%;
     margin: initial;
 }
 
@@ -59,9 +59,16 @@ div.carlsson {
 }
 
 div.pix-center {
-    width: 30%;
-    height: 30%;
+    width: 70%;
+    height: 70%;
     margin: auto;
+    text-align: center !important;
+
+}
+
+.pix-center p {
+    display: block !important;
+    text-align: center !important;
 }
 
 div.text_cell_render>p {
