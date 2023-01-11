@@ -76,3 +76,7 @@ div.text_cell_render>p {
     line-height: 170%;
     font-size: 15px;
 }
+
+div.bold-text>p {
+    font-size: large;
+}
