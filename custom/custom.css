@@ -1,5 +1,5 @@
 body {
-    counter-set: chapter 0 section 0 subsection 0 proposition 0;
+    counter-set: chapter -1 section 0 subsection 0 proposition 0;
 }
 
 h1 {
