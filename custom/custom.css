@@ -1,5 +1,5 @@
 body {
-    counter-set: chapter -1 section 0 subsection 0 proposition 0;
+    counter-set: chapter -1 section 0 subsection 0 proposition 0 Figure 0;
 }
 
 h1 {
@@ -77,6 +77,92 @@ div.text_cell_render>p {
     font-size: 15px;
 }
 
-div.bold-text>p {
+.bold_text {
+    margin: auto;
+    text-align: center !important;
+
+}
+
+.bold_text p {
     font-size: large;
+    display: block !important;
+    text-align: center !important;
+
+}
+
+.pix-center p::before {
+    content: "Figure" counter(Figure)":";
+    counter-increment: Figure;
+}
+
+.Chapter {
+    font-size: 18px !important;
+    font-weight: bold;
+    counter-set: section 0 subsection 0
+}
+
+.Chapter::before {
+    white-space: pre-wrap;
+    content: counter(chapter)"      ";
+    counter-increment: chapter;
+}
+
+.Section {
+    font-size: 15px !important;
+    font-weight: bold;
+    counter-set: subsection 0;
+    margin-top: 0px !important;
+}
+
+.Section::before {
+    white-space: pre-wrap;
+    content: counter(chapter)"." counter(section)"          ";
+    counter-increment: section;
+}
+
+.Subsection {
+    display: block;
+    font-size: 15px !important;
+    margin-top: 0px !important;
+}
+
+.Subsection::before {
+    white-space: pre-wrap;
+    content: counter(chapter)"." counter(section)"." counter(subsection) "              ";
+    counter-increment: subsection;
+}
+
+.Index {
+    font-size: 18px !important;
+    font-weight: bold;
+}
+
+.Title {
+    margin-top: 20%;
+    margin-bottom: 10%;
+}
+
+.Title p {
+    text-align: center;
+    font-family: "MS 明朝", serif;
+    font-size: 30px !important;
+    font-weight: bold;
+}
+
+.cover {
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+}
+
+.Attribute {
+    font-size: 15px;
+}
+
+
+.Join p {
+    text-align: center;
+    font-family: "MS 明朝", serif;
+    font-size: 30px !important;
 }
