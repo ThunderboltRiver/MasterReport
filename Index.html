@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="custom/custom.css">
+    <title>Document</title>
+    <script src="dottedLine.js"></script>
+</head>
+
+<body>
+    <div class="main-content">
+        <div class="Title">
+            <p>多様体上のデータクラウドと</p>
+            <p>パーシステントホモロジー</p>
+            <p>沖田 大河</p>
+        </div>
+        <p class="Index">目次</p>
+        <div class=NotNumber>
+            <div class="contents">
+                <p class="Chapter">0&emsp;&emsp;序文</p>
+                <div class="pageNum">
+                    <p>1</p>
+                </div>
+            </div>
+            <div class="contents">
+                <p class="Section">&emsp; &emsp;&emsp;&emsp;はじめに</p>
+                <div class="pageNum">
+                    <p>1</p>
+                </div>
+            </div>
+            <p class="Section">&emsp; &emsp;&emsp;&emsp;謝辞</p>
+        </div>
+        <p class="Chapter">ホモロジー</p>
+        <p class="Section"> 単体複体</p>
+        <p class="Subsection">単体複体と多面体</p>
+        <p class="Subsection">単体複体の組み合わせ構造</p>
+        <p class="Subsection">単体分割</p>
+        <p class="Subsection">脈体定理</p>
+
+        <p class="Section">ホモロジー群</p>
+        <p class="Subsection">複体のホモロジー</p>
+        <p class="Subsection">ホモトピー同値</p>
+        <p class="Subsection">誘導準同型</p>
+        <p class="Subsection">相対ホモロジー</p>
+
+        <p class="Section">多様体ホモロジー</p>
+        <p class="Subsection">ホモロジー多様体</p>
+        <p class="Subsection">向きづけ可能性</p>
+        <p class="Chapter">コホモロジー</p>
+
+        <p class="Section">コホモロジー群</p>
+        <p class="Section">積 </p>
+        <p class="Section">ホイットニー類</p>
+        <p class="Chapter">パーシステント・(コ)ホモロジー</p>
+
+        <p class="Section">構造定理</p>
+        <p class="Section">パーシステントホモロジー</p>
+        <p class="Section">パーシステントコホモロジー</p>
+        <p class="Subsection">パーシステントホイットニー類</p>
+        <p class="Section">自然画像データのパーシステントホモロジー</p>
+        <p class="Subsection">$S^7$へのパッチの射影</p>
+        <p class="Subsection">パッチの高密度空間における結果</p>
+        <p class="Chapter">多様体上の点データに対するパーシステントホモロジー</p>
+        <p class="Section">多様体上の距離</p>
+        <p class="Subsection">円周$S^1$</p>
+        <p class="Subsection">実射影直線$P^1$</p>
+        <p class="Subsection">$n$次元トーラス</p>
+        <p class="Subsection">クライン・ボトル</p>
+        <p class="Section">いくつかの実験</p>
+        <p class="Subsection">一様乱数</p>
+        <p class="Subsection">正規分布の場合</p>
+        <script>
+            var contentsList = Array.from(document.getElementsByClassName("contents"));
+            dottedline = (element) => {
+                const sectionName = element.firstElementChild;
+                const pageNumber = element.lastElementChild;
+                const dottedline = document.createElement('p');
+                dottedline.textContent = "\u00A0 .";
+                console.log("test");
+                element.insertBefore(dottedline, pageNumber);
+            }
+
+
+            for (const element of contentsList) {
+                dottedline(element);
+            }
+        </script>
+    </div>
+</body>
+
+</html>
